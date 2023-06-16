@@ -1,0 +1,100 @@
+.home{
+    padding: 42px 0 75px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 43px;
+    } 
+}
+.book__content{
+    max-width: 590px;
+    width: 100%;
+    margin: auto 0;
+    .full-title{
+        @include fontCardo;
+        @include fonttext(21px,white,36px);
+        display: block;
+        margin: 0 0 10px 49px  ;
+      
+        > span {
+          position: relative;
+          display: inline-block;
+      
+          &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 35px;
+            height: 2px;
+            background: $color;
+            right: 100%;
+            margin-right: 14px;
+          }
+        }
+    }
+    .title{
+        @include fonttext(64px,white,78px);
+        @include fontCardo;
+        margin: 0 0 20px 0;
+    }
+    .text{
+        @include fonttext(18px,white,29px);
+        @include fontInter;
+        margin: 0 0 40px 0;
+    }
+}
+.home__button{
+    display: flex;
+    margin-bottom: 50px;
+    .home__button_demo{
+        display: flex;
+        margin:auto 50px;
+        @include fontCardo;
+        @include fonttext(19px,white,30px);
+        .button{
+            border-bottom: 1px solid white;
+        }  
+    }
+}
+.book_info__list{
+    display: flex;
+    column-gap: 70px;
+    @include fonttext(24px,white,29px);
+    @include fontCardo;
+    .book_info__item{
+        display: flex;
+        margin-left: 20px;
+        > span {
+            position: relative;
+            display: inline-block;
+        
+            &::before {
+              content: "●";
+              position: absolute;
+              top: 0px;
+              color: $color;
+              right: 100%;
+              margin-right: 10px;
+              font-size: 30px;
+            }
+          }
+    }
+}
+.about_info{
+    display: flex;
+    margin: 0 20px;
+    column-gap: 73px;
+    @include fonttext(17px,#B4C7E7,27px);
+    @include fontInter;
+    .about_info__item:last-child{
+        margin-left: 24px;
+    }
+}
+
+
+
+
+  
+
+
+

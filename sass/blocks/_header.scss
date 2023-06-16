@@ -1,0 +1,74 @@
+.header{
+    padding: 32px 0;
+    width: 100%;
+}
+.container_menu{
+    display: flex;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    @include link(white,$color,$colorActive);
+    &__item{
+        margin-right: 10px;
+    } 
+    &__item_page{  
+        display: inline-block;
+        width: 81px;
+        height: 20px;
+        
+    }
+
+}
+.social{
+    display: flex;
+    column-gap: 10px;
+    margin: 0 20px;
+    align-items: center;
+    @include linkbg(white,$color,$colorActive);
+    &__link{  
+        padding: 16px;
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+    }  
+}
+.menu{
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+    max-width: 700px;
+    width: 100%;
+
+    &__item_basket{
+        @include link(#141414,$color,$colorActive);
+        
+    }
+    &__list_button{
+        .menu__item{
+            margin-left: 40px;
+        }
+        .order--button{
+            margin-left: 50px;
+        }
+    }
+    &__list_burger{
+        @include link(white,$color,$colorActive);
+        @include fontInter;
+        font-size: 17px;
+        column-gap: 40px;
+        margin: 0 7px;
+        .menu__item{
+            margin: 0 auto;
+        }  
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+
+    }
+
+}
+
+

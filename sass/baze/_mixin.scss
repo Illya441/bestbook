@@ -1,0 +1,51 @@
+@mixin fontCardo{
+    font-family: 'Cardo', serif;
+    font-weight: 400;
+}
+@mixin fontInter{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+@mixin link($link, $hover, $active){
+    a{
+        color: $link;
+    
+        &:hover {
+            color: $hover;
+        }
+    
+        &:active {
+            color: $active;
+        }
+    }
+}
+@mixin linkbg($link, $hover, $active){
+    a{
+        background-color: $link;
+    
+        &:hover {
+            background-color: $hover;
+        }
+    
+        &:active {
+            background-color: $active;
+        }
+    }
+}
+@mixin button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 222px;
+    background: $color;
+    height: 66px;
+    font-size: 19px;
+    
+    @include fontCardo;
+    @include link($bgColor,#8a6a17 ,$color )
+}
+@mixin fonttext($size,$colortxt,$lnheight){
+    font-size: $size;
+    color: $colortxt;
+    line-height: $lnheight;
+}
