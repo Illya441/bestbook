@@ -1,0 +1,157 @@
+.author-section {
+  background: $background-color_3;
+
+  .container {
+    @include breakpoint($breakpoint_xl) {
+      display: flex;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 605px;
+    margin: 50px auto;
+
+    @include breakpoint($breakpoint_xl) {
+      margin: 0 0 0 150px;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+  }
+
+  .heading {
+    margin-bottom: 30px;
+
+    @include breakpoint($max: $breakpoint_vsm) {
+      font-size: 29px;
+    }
+  }
+}
+
+.author-statistics {
+  gap: 26px;
+  margin-top: 33px;
+
+  @include breakpoint($breakpoint_vsm) {
+    display: flex;
+
+    &__item {
+      max-width: 181px;
+    }
+
+    &__item:not(:last-child) {
+      border-right: 2px solid orange;
+    }
+  }
+
+  @include breakpoint($max: $breakpoint_vsm) {
+    &__item {
+      max-width: 115px;
+      padding-bottom: 20px;
+      margin-bottom: 7px;
+    }
+
+    &__item:not(:last-child) {
+      border-bottom: 2px solid orange;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__value {
+    font-family: $font-heading;
+    font-size: 34px;
+    line-height: 60px;
+    color: $blueColor;
+
+    @include breakpoint($breakpoint_sm) {
+      font-size: 54px;
+      line-height: 77px;
+    }
+  }
+
+  p {
+    line-height: 1.2706;
+
+    @include breakpoint($breakpoint_sm) {
+      font-size: 17px;
+    }
+  }
+}
+
+.author-contacts {
+  width: 100%;
+  max-width: 484px;
+  padding: 15px 20px;
+  margin-top: 55px;
+  background: $blueColor;
+
+  @include breakpoint($breakpoint_vsm) {
+    display: flex;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 314px;
+    margin: auto;
+
+    @include breakpoint($breakpoint_vsm) {
+      padding: 18px 0 8px 40px;
+    }
+
+    @include breakpoint($max: $breakpoint_vsm) {
+      text-align: center;
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1.2;
+    color: $colorYLLW;
+
+    @include breakpoint($max: $breakpoint_vsm) {
+      margin-top: 10px;
+    }
+  }
+
+  &__info {
+    font-size: 13px;
+    line-height: 1.5833;
+    color: $color_txt_1;
+
+    @include breakpoint($breakpoint_xxl) {
+      font-size: 18px;
+    }
+
+    @include breakpoint($breakpoint_xl) {
+      font-size: 15px;
+    }
+
+    a {
+      letter-spacing: 0.19px;
+    }
+  }
+}
+
+.QR-code {
+  width: 100%;
+  max-width: 130px;
+  height: auto;
+  margin: auto;
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.6s ease-in-out;
+  transform: scale(1, 1);
+
+  &:hover {
+    box-shadow: 0 0 20px 5px rgba(12, 122, 231, 20%);
+    transform: scale(1.3);
+  }
+}

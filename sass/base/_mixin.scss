@@ -1,0 +1,63 @@
+@mixin link($link, $hover, $active) {
+  color: $link;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+}
+
+@mixin btnBG($bgcolor, $hover, $active) {
+  background-color: $bgcolor;
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  &:active {
+    background-color: $active;
+  }
+}
+
+@mixin linkbg($link, $hover, $active) {
+  a {
+    background-color: $link;
+
+    &:hover {
+      background-color: $hover;
+    }
+
+    &:active {
+      background-color: $active;
+    }
+  }
+}
+
+@mixin breakpoint($min: null, $max: null) {
+  $media-min: "";
+
+  @if $min {
+    $media-min: "(min-width: " + $min + ")";
+  }
+
+  $media-max: "";
+
+  @if $max {
+    $media-max: "(max-width: " + ($max - 0.02) + ")";
+  }
+
+  $add-media: "";
+
+  @if $min and $max {
+    $add-media: " and ";
+  }
+
+  $media: $media-min + $add-media + $media-max;
+
+  @media #{$media} {
+    @content;
+  }
+}

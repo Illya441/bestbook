@@ -1,0 +1,88 @@
+.book-section {
+  background-color: $background-color_1;
+}
+
+.book-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 630px));
+  gap: 30px;
+  justify-content: center;
+}
+
+.book-card {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  transform: scale(1, 1);
+
+  &__img {
+    position: relative;
+    width: 100%;
+    max-width: 285px;
+    height: auto;
+
+    &--size {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 0 11px 0 rgba(0, 0, 0, 20%);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: $zindex-modal;
+    width: 100%;
+    max-width: 315px;
+  }
+}
+
+.price-value {
+  margin: 7px 0 17px;
+  font-size: 16px;
+  line-height: 33px;
+  color: $colorYLLW;
+
+  @include breakpoint($breakpoint_sm) {
+    font-size: 21px;
+  }
+}
+
+.book-card-options {
+  $pading-left: 26px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    $pading-left: 26px;
+
+    padding-left: $pading-left;
+    margin: 13px 0 27px;
+    font-size: 17px;
+    line-height: 29px;
+    color: $blueColor;
+
+    @include breakpoint($breakpoint_sm) {
+      font-size: 24px;
+    }
+
+    &::before {
+      display: block;
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+      margin-bottom: -22px;
+      margin-left: $pading-left * -1;
+      content: "";
+      background: $colorYLLW;
+      border-radius: 14px;
+
+      @include breakpoint($breakpoint_sm) {
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.subscribe-section {
+  .container {
+    max-width: 1300px;
+    padding: 150px 75px;
+    background: #ffca42;
+
+    @include breakpoint($breakpoint_xl) {
+      padding: 150px;
+    }
+
+    .heading {
+      margin-bottom: 25px;
+
+      &::after {
+        background: $blueColor;
+
+        @include breakpoint($max: $breakpoint_sm) {
+          height: 1px;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+
+      @include breakpoint($breakpoint_sm) {
+        font-size: 42px;
+      }
+    }
+
+    p {
+      line-height: 1.5833;
+      color: $blueColor;
+      text-align: center;
+
+      @include breakpoint($breakpoint_sm) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 50px;
+
+  @include breakpoint($max: $breakpoint_md) {
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-left: 16px;
+
+    @include breakpoint($max: $breakpoint_md) {
+      margin: 20px auto 0;
+    }
+
+    &--secondary {
+      --border-color: transparent;
+
+      width: 100%;
+      min-width: 170px;
+      max-width: 328px;
+      font-family: $font-main;
+      font-size: 18px;
+      color: #fff;
+      border: 2px solid $blueColor;
+
+      @include btnBG($blueColor, $blueColorhover, $blueColor);
+
+      &:hover {
+        border: 2px solid $blueColorhover;
+      }
+
+      &:active {
+        border: 2px solid $blueColor;
+      }
+    }
+  }
+
+  input[type="text"] {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: 656px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #b4c7e7;
+    border: 1px solid #dce1e9;
+
+    @include breakpoint($breakpoint_vsm) {
+      padding: 20px 40px;
+      font-size: 18px;
+    }
+  }
+
+  ::placeholder {
+    font-size: 14px;
+    color: #b4c7e7;
+
+    @include breakpoint($breakpoint_vsm) {
+      font-size: 18px;
+    }
+  }
+}

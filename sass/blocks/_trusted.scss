@@ -1,0 +1,28 @@
+.feature-company {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+
+  &__item {
+    box-sizing: border-box;
+    align-self: flex-start;
+    max-width: 313px;
+
+    p {
+      text-align: center;
+    }
+
+    h6 {
+      margin: 22px 0 16px;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 100%;
+    max-width: 189px;
+    margin: 0 auto;
+  }
+}

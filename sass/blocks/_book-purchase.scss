@@ -1,0 +1,47 @@
+.book-purchase-section {
+  padding: 70px 0;
+  background: $blueColor;
+
+  .container {
+    @include breakpoint($breakpoint_xl) {
+      display: flex;
+      gap: 130px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 610px;
+    margin: 55px auto;
+
+    h2 {
+      margin-bottom: 27px;
+      color: $color_1;
+    }
+
+    p {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    button {
+      max-width: 220px;
+      margin-top: 27px;
+      color: $color_1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 610px;
+    margin: auto;
+
+    @include breakpoint($breakpoint_xl) {
+      max-width: 560px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

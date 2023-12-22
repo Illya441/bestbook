@@ -1,0 +1,136 @@
+.words-readers-section {
+  .container {
+    @include breakpoint($breakpoint_xxl) {
+      display: flex;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 448px;
+    margin: auto 0;
+
+    @include breakpoint($max: $breakpoint_xxl) {
+      margin: auto;
+    }
+
+    p {
+      width: 100%;
+      max-width: 435px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 42px;
+      line-height: 50.4px;
+
+      span {
+        display: inline-block;
+      }
+    }
+}
+
+.overall-rating {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.5833;
+  color: $blueColor;
+
+  @include breakpoint($max: $breakpoint_xxl) {
+    margin-bottom: 50px;
+  }
+}
+
+.customer-comments {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(349px, 1fr));
+  grid-auto-flow: row dense;
+  gap: 30px;
+  justify-items: center;
+  width: 100%;
+  max-width: 802px;
+  margin: auto;
+
+  @include breakpoint($max: $breakpoint_vsm) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  &::before {
+    display: block;
+    order: 2;
+    content: "";
+
+    // opacity: 1;
+
+    @include breakpoint($max: $breakpoint_md) {
+      content: normal;
+    }
+  }
+
+  &__item {
+    grid-row: span 2;
+    width: 100%;
+    max-width: 381px;
+    min-height: 300px;
+    padding: 30px 35px;
+    background-color: $blueColor;
+
+    .half-stars {
+      width: 76px;
+      height: 13px;
+      margin-top: 15px;
+
+      label {
+        height: 13px;
+      }
+
+      .hsr {
+        width: 8px;
+        margin-right: -8px;
+      }
+    }
+
+    p {
+      margin-top: 13px;
+      line-height: 1.6;
+
+      @include breakpoint($breakpoint_sm) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__item:nth-child(n + 2) {
+    order: 3;
+  }
+}
+
+.customer {
+  display: flex;
+  margin-bottom: 20px;
+
+  &__avatar {
+    border-radius: 100px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 226px;
+    padding: 0 40px 7px 20px;
+
+    h6 {
+      line-height: 1.2;
+      color: $background-color_1;
+    }
+
+    .rating {
+      margin-top: 15px;
+      font-size: 25px;
+
+      &__body {
+        height: 13px;
+      }
+    }
+  }
+}

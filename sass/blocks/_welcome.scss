@@ -1,0 +1,60 @@
+.welcome-section {
+  color: $color_1;
+  background: $blueColor;
+
+  .container {
+    @include breakpoint($breakpoint_xl) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 43px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 590px;
+
+    @include breakpoint($breakpoint_xl) {
+      margin: auto 20px auto 0;
+    }
+
+    @include breakpoint($max: $breakpoint_xl) {
+      margin: 0 auto 30px;
+    }
+
+    p {
+      font-size: 18px;
+      color: $color_txt_2;
+    }
+  }
+
+  &__img {
+    @include breakpoint($max: $breakpoint_xl) {
+      width: 100%;
+      max-width: 592px;
+      margin: 0 auto;
+    }
+
+    &--size {
+      object-fit: cover;
+      width: 100%;
+      max-width: 592px;
+      height: auto;
+    }
+  }
+}
+
+.welcome-buttons {
+  display: flex;
+  align-items: center;
+  color: rebeccapurple;
+
+  @include breakpoint($breakpoint_sm) {
+    margin: 50px 0;
+  }
+
+  @include breakpoint($max: $breakpoint_sm) {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+}
