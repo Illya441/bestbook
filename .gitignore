@@ -2,5 +2,5 @@ node_modules/
 .vscode/
 .htmlhintrc
 package-lock.json
-package.json
 prepros.config
+ghg.txt

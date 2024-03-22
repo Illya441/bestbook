@@ -28,6 +28,7 @@
         display: inline-block;
       }
     }
+  }
 }
 
 .overall-rating {
@@ -123,14 +124,65 @@
       line-height: 1.2;
       color: $background-color_1;
     }
+  }
+}
 
-    .rating {
-      margin-top: 15px;
-      font-size: 25px;
+.heading-rating{
+  margin-top: 15px;
 
-      &__body {
-        height: 13px;
-      }
+
+gap: 0 10px;
+display: flex;
+
+&__svg{
+  display: flex;
+  align-items: center;
+  width: 120px; 
+  height: 20px;
+}
+
+p{
+  font-size: 22px;
+line-height: 26.4px;
+color: #1B3764;
+font-family: Cardo;
+font-weight: 400;
+}
+
+use {
+  @for $i from 2 through 5 {
+    &:nth-child(#{$i}) {
+      transform: translateX((20px + 5px) * ($i - 1));
     }
   }
+  
+}
+  
+  .rating {
+    display: block;
+    height: 20px;
+    // width: 120px;
+
+  }
+  
+}
+.customer{
+  
+  use {
+    @for $i from 2 through 5 {
+      &:nth-child(#{$i}) {
+        transform: translateX((12.67px + 3px) * ($i - 1));
+      }
+    }
+    
+  }
+  
+
+  
+  .rating {
+    display: block;
+    height: 14px;
+    width: 76px;
+  }
+  
 }
